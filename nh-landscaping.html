@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>N&H Landscaping Hobart | Drainage, Retaining Walls, Paving & Artificial Lawn</title>
+  <meta name="description" content="N&H Landscaping Hobart – drainage, excavation, retaining walls, paving and artificial lawn. Get a free quote today.">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dolerite:    #1c2026;
+  --deep-forest: #141d16;
+  --huon:        #b8762e;
+  --huon-light:  #d4954a;
+  --teal:        #1a5c6e;
+  --mist:        #7fa8b8;
+  --grass:       #3d5c2a;
+  --cream:       #ede8dc;
+  --smoke:       #9aa09a;
+  --white:       #ffffff;
+  --err:         #b84040;
+  --display:     'Cormorant Garamond', Georgia, serif;
+  --body:        'Nunito Sans', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--dolerite);color:var(--cream);line-height:1.65;overflow-x:hidden;cursor:none}
+
+/* CURSOR */
+#cur,#curR{position:fixed;pointer-events:none;border-radius:50%;z-index:9999;transform:translate(-50%,-50%)}
+#cur{width:10px;height:10px;background:var(--huon);transition:width .15s,height .15s}
+#curR{width:34px;height:34px;border:1.5px solid rgba(184,118,46,.45);transition:left .14s ease,top .14s ease}
+body *:hover~#cur{width:16px;height:16px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:22px 6%;transition:all .4s}
+nav.on{background:rgba(20,24,28,.96);backdrop-filter:blur(12px);padding:14px 6%;border-bottom:1px solid rgba(184,118,46,.18)}
+.nLogo{font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--cream);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nMark{width:30px;height:30px;background:var(--huon);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--body);font-size:.75rem;font-weight:600;color:#fff}
+.nLinks{display:flex;align-items:center;gap:32px;list-style:none}
+.nLinks a{color:var(--smoke);text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;position:relative;transition:color .2s}
+.nLinks a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--huon);transition:width .3s}
+.nLinks a:hover{color:var(--cream)}
+.nLinks a:hover::after{width:100%}
+.nCta{border:1.5px solid var(--huon)!important;color:var(--huon-light)!important;padding:9px 20px;border-radius:3px!important;transition:background .25s!important}
+.nCta:hover{background:rgba(184,118,46,.12)!important}
+.nCta::after{display:none!important}
+@media(max-width:700px){.nLinks{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:0 6%;overflow:hidden}
+.hBg{position:absolute;inset:0;background:linear-gradient(168deg,var(--deep-forest) 0%,#0d1810 45%,var(--dolerite) 100%)}
+.mist1,.mist2,.mist3{position:absolute;left:-20%;right:-20%;height:160px;background:linear-gradient(to right,transparent 0%,rgba(127,168,184,.08) 35%,rgba(127,168,184,.14) 50%,rgba(127,168,184,.08) 65%,transparent 100%);border-radius:50%;pointer-events:none;animation:mistF 9s ease-in-out infinite}
+.mist1{bottom:18%}.mist2{bottom:30%;opacity:.55;animation-delay:-3s}.mist3{bottom:44%;opacity:.3;animation-delay:-6s}
+@keyframes mistF{0%,100%{transform:translateX(0) scaleX(1)}50%{transform:translateX(2%) scaleX(1.03)}}
+.particles-wrap{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.pt{position:absolute;width:3px;height:3px;background:var(--huon);border-radius:50%;opacity:0;animation:ptFall linear infinite}
+@keyframes ptFall{0%{opacity:0;transform:translateY(-10px) translateX(0) rotate(0)}10%{opacity:.6}90%{opacity:.2}100%{opacity:0;transform:translateY(100vh) translateX(35px) rotate(360deg)}}
+.grain{position:absolute;inset:0;z-index:3;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");background-size:200px;opacity:.3}
+.hMtn{position:absolute;bottom:0;left:0;right:0;z-index:1;animation:mtnD 20s ease-in-out infinite alternate}
+@keyframes mtnD{from{transform:translateX(-6px)}to{transform:translateX(6px)}}
+.hContent{position:relative;z-index:10;max-width:680px;padding-top:80px}
+.hEye{display:flex;align-items:center;gap:12px;margin-bottom:26px;opacity:0;animation:sL .7s .2s ease forwards}
+.hLine{width:36px;height:1.5px;background:var(--huon)}
+.hEyeTxt{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--huon-light);font-weight:600}
+.hContent h1{font-family:var(--display);font-size:clamp(2.8rem,6vw,5.2rem);font-weight:700;line-height:1.06;color:var(--cream);margin-bottom:26px;opacity:0;animation:sL .7s .35s ease forwards}
+.hContent h1 em{color:var(--huon);font-style:italic;display:block}
+.hDesc{font-size:1rem;color:var(--smoke);max-width:460px;font-weight:300;margin-bottom:40px;opacity:0;animation:sL .7s .5s ease forwards}
+.hBtns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:sL .7s .65s ease forwards}
+.bAmber{background:var(--huon);color:#fff;padding:14px 34px;border-radius:3px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;position:relative;overflow:hidden;transition:transform .2s,background .2s;display:inline-block}
+.bAmber::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.15) 50%,transparent 100%);transform:translateX(-100%);transition:transform .5s}
+.bAmber:hover::before{transform:translateX(100%)}
+.bAmber:hover{background:var(--huon-light);transform:translateY(-2px)}
+.bGhost{border:1.5px solid rgba(154,160,154,.4);color:var(--smoke);padding:12px 30px;border-radius:3px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;transition:border-color .2s,color .2s;display:inline-block}
+.bGhost:hover{border-color:var(--mist);color:var(--cream)}
+.scrollHint{position:absolute;bottom:40px;left:6%;z-index:10;display:flex;align-items:center;gap:12px;opacity:0;animation:fIn 1s 1.3s ease forwards}
+.sLine{width:1px;height:56px;background:linear-gradient(to bottom,var(--huon),transparent);animation:sP 2.2s ease-in-out infinite}
+@keyframes sP{0%,100%{opacity:.4}50%{opacity:1}}
+.sLabel{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);writing-mode:vertical-lr}
+.hDeco{position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:10;opacity:0;animation:fIn 1s .9s ease forwards}
+@media(max-width:860px){.hDeco{display:none}}
+@keyframes sL{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fIn{from{opacity:0}to{opacity:1}}
+
+/* STATS */
+.stats{background:var(--deep-forest);border-top:1px solid rgba(184,118,46,.2);border-bottom:1px solid rgba(184,118,46,.2);display:flex;justify-content:center;flex-wrap:wrap}
+.st{padding:34px 48px;text-align:center;flex:1;min-width:150px;position:relative}
+.st::after{content:'';position:absolute;top:25%;bottom:25%;right:0;width:1px;background:rgba(184,118,46,.15)}
+.st:last-child::after{display:none}
+.stN{font-family:var(--display);font-size:2.8rem;font-weight:700;color:var(--huon);line-height:1;display:block}
+.stL{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--smoke);margin-top:6px;display:block}
+
+/* SERVICES */
+#services{padding:100px 6%;background:var(--dolerite);position:relative;overflow:hidden}
+#services::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(184,118,46,.022) 80px,rgba(184,118,46,.022) 81px);pointer-events:none}
+.secHead{margin-bottom:60px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--huon);font-weight:600;margin-bottom:14px}
+.kicker::before{content:'';width:22px;height:1.5px;background:var(--huon)}
+.secTitle{font-family:var(--display);font-size:clamp(1.9rem,4vw,3.2rem);font-weight:700;color:var(--cream);line-height:1.1;margin-bottom:14px}
+.secSub{color:var(--smoke);font-weight:300;font-size:.95rem;max-width:500px}
+.sGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,118,46,.1);border:1px solid rgba(184,118,46,.1);border-radius:8px;overflow:hidden}
+@media(max-width:880px){.sGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.sGrid{grid-template-columns:1fr}}
+.sCard{background:var(--dolerite);padding:42px 34px;position:relative;overflow:hidden;transition:background .3s;cursor:default}
+.sCard::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--huon);transition:height .4s ease}
+.sCard:hover::before{height:100%}
+.sCard:hover{background:#1f2820}
+.sNum{font-family:var(--display);font-size:.78rem;color:rgba(184,118,46,.35);letter-spacing:.14em;margin-bottom:18px;display:block}
+.sIco{width:50px;height:50px;border:1px solid rgba(184,118,46,.22);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px;transition:border-color .3s,background .3s}
+.sCard:hover .sIco{border-color:var(--huon);background:rgba(184,118,46,.07)}
+.sCard h3{font-family:var(--display);font-size:1.25rem;color:var(--cream);margin-bottom:10px;transition:color .3s}
+.sCard:hover h3{color:var(--huon-light)}
+.sCard p{font-size:.86rem;color:var(--smoke);font-weight:300;line-height:1.75}
+
+/* WILDERNESS */
+.wild{position:relative;height:460px;overflow:hidden;display:flex;align-items:center}
+.wild img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.38) saturate(.65);transform:scale(1.06);transition:transform 9s ease}
+.wild:hover img{transform:scale(1)}
+.wildTxt{position:relative;z-index:2;padding:0 6%;max-width:580px}
+.wildTxt blockquote{font-family:var(--display);font-size:clamp(1.7rem,3.2vw,2.8rem);font-weight:600;color:var(--cream);line-height:1.2;font-style:italic}
+.wildTxt cite{display:block;font-size:.74rem;font-style:normal;font-family:var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--huon);margin-top:20px;font-weight:600}
+
+/* WHY */
+#why{padding:100px 6%;background:var(--deep-forest);position:relative}
+#why::after{content:'';position:absolute;bottom:0;left:6%;right:6%;height:1px;background:linear-gradient(to right,transparent,rgba(184,118,46,.25),transparent)}
+.whyLayout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+@media(max-width:780px){.whyLayout{grid-template-columns:1fr;gap:48px}}
+.wImgFrame{border-radius:8px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.wImgFrame img{width:100%;height:100%;object-fit:cover;filter:brightness(.7) saturate(.75)}
+.wOverlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,29,22,.7) 0%,transparent 55%)}
+.wBadge{position:absolute;bottom:-18px;right:-18px;width:108px;height:108px;background:var(--huon);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:rot 14s linear infinite;border:4px solid var(--deep-forest)}
+.wBadge s1{font-family:var(--display);font-size:1.9rem;font-weight:700;color:#fff;line-height:1}
+.wBadge s2{font-size:.56rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.8);text-align:center;padding:0 10px}
+@keyframes rot{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.wPoints{margin-top:32px;display:flex;flex-direction:column;gap:20px}
+.wPoint{display:flex;gap:18px;padding:22px;background:rgba(28,32,38,.6);border-radius:3px;border-left:2px solid var(--huon);transition:background .2s,border-color .2s}
+.wPoint:hover{background:rgba(28,32,38,.95);border-color:var(--huon-light)}
+.wPIco{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.wPoint h4{font-family:var(--display);font-size:1.1rem;color:var(--cream);margin-bottom:3px}
+.wPoint p{font-size:.84rem;color:var(--smoke);font-weight:300}
+
+/* QUOTE */
+#quote{padding:100px 6%;background:var(--dolerite);position:relative;overflow:hidden}
+#quote::before{content:'';position:absolute;top:-120px;right:-120px;width:460px;height:460px;background:radial-gradient(circle,rgba(26,92,110,.1) 0%,transparent 70%);pointer-events:none}
+#quote::after{content:'';position:absolute;bottom:-80px;left:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(184,118,46,.07) 0%,transparent 70%);pointer-events:none}
+.qLayout{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start;position:relative;z-index:1}
+@media(max-width:880px){.qLayout{grid-template-columns:1fr;gap:50px}}
+.qLeft>p{color:var(--smoke);font-weight:300;margin-bottom:40px;font-size:.93rem}
+.cRow{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.cIco{width:42px;height:42px;flex-shrink:0;border:1px solid rgba(184,118,46,.28);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;background:rgba(184,118,46,.05);transition:background .2s}
+.cRow:hover .cIco{background:rgba(184,118,46,.12)}
+.cTxt strong{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--huon);font-weight:600;margin-bottom:2px}
+.cTxt a,.cTxt span{color:var(--cream);text-decoration:none;font-size:.92rem;font-weight:300;transition:color .2s}
+.cTxt a:hover{color:var(--huon-light)}
+
+/* FORM PANEL */
+.fPanel{background:var(--deep-forest);border:1px solid rgba(184,118,46,.14);border-radius:8px;padding:46px 42px;position:relative;overflow:hidden}
+.fPanel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--huon),var(--teal),var(--huon));background-size:200%;animation:shim 3.5s ease infinite}
+@keyframes shim{0%,100%{background-position:0%}50%{background-position:100%}}
+@media(max-width:560px){.fPanel{padding:30px 22px}}
+.fTitle{font-family:var(--display);font-size:1.55rem;font-weight:700;color:var(--cream);margin-bottom:30px}
+.fTitle span{color:var(--huon)}
+.fRow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.fRow{grid-template-columns:1fr}}
+.fGrp{display:flex;flex-direction:column;margin-bottom:18px}
+.fGrp label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(154,160,154,.75);margin-bottom:7px}
+.fGrp input,.fGrp select,.fGrp textarea{background:rgba(28,32,38,.85);border:1px solid rgba(184,118,46,.18);border-radius:3px;padding:11px 14px;font-family:var(--body);font-size:.9rem;color:var(--cream);outline:none;transition:border-color .25s,box-shadow .25s,background .25s;-webkit-appearance:none}
+.fGrp select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23b8762e' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.fGrp select option{background:var(--dolerite);color:var(--cream)}
+.fGrp input::placeholder,.fGrp textarea::placeholder{color:rgba(154,160,154,.35)}
+.fGrp input:focus,.fGrp select:focus,.fGrp textarea:focus{border-color:var(--huon);background:rgba(28,32,38,1);box-shadow:0 0 0 3px rgba(184,118,46,.1)}
+.fGrp textarea{resize:vertical;min-height:106px}
+.hpTrap{opacity:0;position:absolute;pointer-events:none;height:0;overflow:hidden}
+.fErr{font-size:.73rem;color:var(--err);margin-top:4px}
+.subBtn{width:100%;background:var(--huon);color:#fff;border:none;padding:15px;border-radius:3px;font-family:var(--body);font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;position:relative;overflow:hidden;transition:background .25s,transform .15s;margin-top:6px}
+.subBtn::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.12) 50%,transparent 100%);transform:translateX(-100%);transition:transform .5s}
+.subBtn:hover::before{transform:translateX(100%)}
+.subBtn:hover:not(:disabled){background:var(--huon-light);transform:translateY(-1px)}
+.subBtn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.fMsg{margin-top:16px;padding:13px 16px;border-radius:3px;font-size:.86rem;display:none}
+.fMsg.ok{background:rgba(61,92,42,.2);border:1px solid rgba(61,92,42,.5);color:#8dc87a;display:block}
+.fMsg.fail{background:rgba(184,64,64,.14);border:1px solid rgba(184,64,64,.38);color:#df8080;display:block}
+.secNote{display:flex;align-items:center;gap:7px;margin-top:14px;font-size:.7rem;color:rgba(154,160,154,.45)}
+
+/* FOOTER */
+footer{background:var(--deep-forest);border-top:1px solid rgba(184,118,46,.12);padding:60px 6% 34px}
+.fInner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;padding-bottom:44px;border-bottom:1px solid rgba(184,118,46,.08);margin-bottom:32px}
+.fBrand .fLogo{font-family:var(--display);font-size:1.7rem;font-weight:700;color:var(--cream);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fBrand .fLogo span{color:var(--huon)}
+.fBrand p{color:var(--smoke);font-size:.83rem;font-weight:300;max-width:240px;line-height:1.8}
+.fLinks h4{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--huon);margin-bottom:16px;font-weight:600}
+.fLinks ul{list-style:none}
+.fLinks ul li{margin-bottom:9px}
+.fLinks ul li a{color:var(--smoke);text-decoration:none;font-size:.86rem;font-weight:300;transition:color .2s}
+.fLinks ul li a:hover{color:var(--huon-light)}
+.fBot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fBot p{font-size:.76rem;color:rgba(154,160,154,.4)}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
+.revL{opacity:0;transform:translateX(-32px);transition:opacity .65s ease,transform .65s ease}
+.revR{opacity:0;transform:translateX(32px);transition:opacity .65s ease,transform .65s ease}
+.rev.vis,.revL.vis,.revR.vis{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nLogo"><div class="nMark">NH</div>N&amp;H Landscaping</a>
+  <ul class="nLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">About</a></li>
+    <li><a href="#quote" class="nCta">Free Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hBg"></div>
+  <div class="mist1"></div><div class="mist2"></div><div class="mist3"></div>
+  <div class="particles-wrap" id="pts"></div>
+  <div class="grain"></div>
+
+  <div class="hMtn">
+    <svg viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:300px;display:block;">
+      <defs>
+        <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="rgba(30,50,30,0.7)"/>
+          <stop offset="100%" stop-color="rgba(20,29,22,0.95)"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,300 L0,220 L80,185 L170,165 L260,150 L360,118 L450,88 L530,58 L600,34 L660,14 L720,28 L790,8 L850,30 L920,58 L1000,78 L1080,98 L1170,118 L1260,140 L1360,165 L1440,185 L1440,300 Z" fill="url(#mg)"/>
+      <path d="M0,300 L0,258 L120,242 L260,228 L400,214 L540,200 L680,190 L820,182 L960,188 L1100,198 L1240,212 L1360,228 L1440,242 L1440,300 Z" fill="rgba(14,24,16,0.92)"/>
+    </svg>
+  </div>
+
+  <div class="hContent">
+    <div class="hEye"><span class="hLine"></span><span class="hEyeTxt">Hobart, Tasmania · Local Landscapers</span></div>
+    <h1>Your yard deserves<em>real craftsmanship</em></h1>
+    <p class="hDesc">Beat the winter rush. Drainage, retaining walls, paving and artificial lawn — done by one trusted Hobart crew before the cold months arrive.</p>
+    <div class="hBtns">
+      <a href="#quote" class="bAmber">Get a Free Quote</a>
+      <a href="#services" class="bGhost">Our Services ↓</a>
+    </div>
+  </div>
+
+  <!-- Tas shape deco -->
+  <div class="hDeco">
+    <svg width="155" height="175" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,8 C128,8 156,22 172,47 C188,72 190,102 183,127 C176,152 163,170 148,182 C133,194 118,202 103,212 L100,215 L97,212 C82,202 67,194 52,182 C37,170 24,152 17,127 C10,102 12,72 28,47 C44,22 72,8 100,8 Z" fill="none" stroke="rgba(184,118,46,0.5)" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <circle cx="100" cy="112" r="4" fill="rgba(184,118,46,0.7)"/>
+      <circle cx="100" cy="112" r="10" fill="none" stroke="rgba(184,118,46,0.25)" stroke-width="1"/>
+      <text x="72" y="138" font-size="9" fill="rgba(184,118,46,0.55)" font-family="sans-serif" letter-spacing="2">HOBART</text>
+    </svg>
+  </div>
+
+  <div class="scrollHint"><div class="sLine"></div><span class="sLabel">Scroll</span></div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="st rev"><span class="stN" data-target="100">0</span><span class="stL">% Local — Hobart Based</span></div>
+  <div class="st rev d1"><span class="stN">Free</span><span class="stL">No-obligation quotes</span></div>
+  <div class="st rev d2"><span class="stN" data-target="5">0</span><span class="stL">Services, one crew</span></div>
+  <div class="st rev d3"><span class="stN" data-target="24">0</span><span class="stL">Hr response time</span></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="secHead rev">
+    <div class="kicker">What we do</div>
+    <h2 class="secTitle">Every yard problem,<br>one reliable team</h2>
+    <p class="secSub">From waterlogged soil to bare dirt — we build yards families love, built to last through Tasmanian seasons.</p>
+  </div>
+  <div class="sGrid">
+    <div class="sCard rev d1"><span class="sNum">01</span><div class="sIco">💧</div><h3>Drainage Solutions</h3><p>Fix waterlogged yards and standing water permanently. Surface &amp; sub-surface drainage engineered for Hobart's wet winters.</p></div>
+    <div class="sCard rev d2"><span class="sNum">02</span><div class="sIco">🚜</div><h3>Excavation &amp; Earth Removal</h3><p>Site preparation, levelling and soil removal for all project scales. Clean, efficient and fully managed start to finish.</p></div>
+    <div class="sCard rev d3"><span class="sNum">03</span><div class="sIco">🧱</div><h3>Retaining Walls</h3><p>Structural and decorative walls to manage slopes and create flat, usable spaces. Multiple materials available.</p></div>
+    <div class="sCard rev d4"><span class="sNum">04</span><div class="sIco">⬜</div><h3>Paving</h3><p>Driveways, pathways and entertaining areas built to last. Stylish paving that adds real value to your property.</p></div>
+    <div class="sCard rev d5"><span class="sNum">05</span><div class="sIco">🌱</div><h3>Artificial Lawn</h3><p>Premium turf supply &amp; install. Lush, green and low-maintenance all year round — great for kids and pets.</p></div>
+    <div class="sCard rev d6"><span class="sNum">06</span><div class="sIco">🏡</div><h3>Full Yard Makeovers</h3><p>Combine any services into one transformation. One quote, one crew, one result — exactly what you've been waiting for.</p></div>
+  </div>
+</section>
+
+<!-- WILDERNESS BANNER -->
+<div class="wild">
+  <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80" alt="Tasmanian wilderness landscape">
+  <div class="wildTxt rev">
+    <blockquote>"Built for Tasmania's toughest conditions — and your family."<cite>— N&amp;H Landscaping, Hobart</cite></blockquote>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="whyLayout">
+    <div class="revL" style="position:relative">
+      <div class="wImgFrame">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Landscaping work in Tasmania">
+        <div class="wOverlay"></div>
+      </div>
+      <div class="wBadge">
+        <s1 style="font-family:var(--display);font-size:1.9rem;font-weight:700;color:#fff;line-height:1;display:block">TAS</s1>
+        <s2 style="font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8);text-align:center;padding:0 10px;display:block;margin-top:4px">Owned &amp; Operated</s2>
+      </div>
+    </div>
+
+    <div class="revR">
+      <div class="kicker">Why choose us</div>
+      <h2 class="secTitle">Local knowledge.<br>Real results.</h2>
+      <p class="secSub" style="margin-bottom:32px">We're not a big interstate company. We're your neighbours — we know Hobart's land, weather and properties.</p>
+      <div class="wPoints">
+        <div class="wPoint d1"><span class="wPIco">🗺️</span><div><h4>Hobart-based, always</h4><p>We live here, work here, and take pride in every yard we touch. No fly-in crews or outsourced labour.</p></div></div>
+        <div class="wPoint d2"><span class="wPIco">🌧️</span><div><h4>Built for Tassie weather</h4><p>Everything we build is designed to handle Tasmania's wet winters and challenging terrain.</p></div></div>
+        <div class="wPoint d3"><span class="wPIco">📋</span><div><h4>Honest, straight quotes</h4><p>We visit your property, assess it properly and give you a clear, fair price with no hidden surprises.</p></div></div>
+        <div class="wPoint d4"><span class="wPIco">⏱️</span><div><h4>Book before winter</h4><p>Don't wait until the ground is soaked. Get locked in now so your yard is done before the cold hits.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section id="quote">
+  <div class="qLayout">
+    <div class="qLeft revL">
+      <div class="kicker">Get in touch</div>
+      <h2 class="secTitle">Tell us about your yard</h2>
+      <p>Fill in the form and we'll be in touch within 24 hours to arrange a free on-site quote. No pressure, just an honest conversation.</p>
+      <div class="cRow"><div class="cIco">📞</div><div class="cTxt"><strong>Call Us</strong><a href="tel:+61XXXXXXXXXX">+61 XXX XXX XXX</a></div></div>
+      <div class="cRow"><div class="cIco">📧</div><div class="cTxt"><strong>Email</strong><a href="mailto:info@nhlandscaping.com.au">info@nhlandscaping.com.au</a></div></div>
+      <div class="cRow"><div class="cIco">📍</div><div class="cTxt"><strong>Location</strong><span>Hobart &amp; surrounds, Tasmania</span></div></div>
+    </div>
+
+    <div class="fPanel revR">
+      <div class="fTitle">Request a <span>Free Quote</span></div>
+      <form id="qForm" novalidate autocomplete="on">
+        <div class="hpTrap" aria-hidden="true"><label for="website">Leave blank</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="fRow">
+          <div class="fGrp"><label for="fn">First Name *</label><input type="text" id="fn" name="firstName" placeholder="John" required><span class="fErr" id="efn"></span></div>
+          <div class="fGrp"><label for="ln">Last Name *</label><input type="text" id="ln" name="lastName" placeholder="Smith" required><span class="fErr" id="eln"></span></div>
+        </div>
+        <div class="fGrp"><label for="em">Email Address *</label><input type="email" id="em" name="email" placeholder="john@example.com" required><span class="fErr" id="eem"></span></div>
+        <div class="fRow">
+          <div class="fGrp"><label for="ph">Phone *</label><input type="tel" id="ph" name="phone" placeholder="04XX XXX XXX" required><span class="fErr" id="eph"></span></div>
+          <div class="fGrp"><label for="sb">Suburb</label><input type="text" id="sb" name="suburb" placeholder="e.g. Sandy Bay"></div>
+        </div>
+        <div class="fGrp">
+          <label for="sv">Service *</label>
+          <select id="sv" name="service" required>
+            <option value="">— Select a service —</option>
+            <option>Drainage Solutions</option>
+            <option>Excavation &amp; Earth Removal</option>
+            <option>Retaining Wall</option>
+            <option>Paving</option>
+            <option>Artificial Lawn</option>
+            <option>Full Yard Makeover</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+          <span class="fErr" id="esv"></span>
+        </div>
+        <div class="fGrp"><label for="msg">About Your Project</label><textarea id="msg" name="message" placeholder="Describe your yard or what you'd like done..."></textarea></div>
+        <button type="submit" class="subBtn" id="subBtn">Send Quote Request →</button>
+        <div class="fMsg" id="fMsg"></div>
+        <div class="secNote">🔒 Protected by reCAPTCHA, honeypot &amp; rate limiting</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fInner">
+    <div class="fBrand">
+      <div class="fLogo">N<span>&amp;</span>H Landscaping</div>
+      <p>Turning Hobart yards into spaces families love — built for Tasmania's toughest seasons.</p>
+    </div>
+    <div class="fLinks">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Drainage Solutions</a></li>
+        <li><a href="#services">Retaining Walls</a></li>
+        <li><a href="#services">Paving</a></li>
+        <li><a href="#services">Artificial Lawn</a></li>
+        <li><a href="#services">Excavation</a></li>
+      </ul>
+    </div>
+    <div class="fLinks">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+61XXXXXXXXXX">+61 XXX XXX XXX</a></li>
+        <li><a href="mailto:info@nhlandscaping.com.au">info@nhlandscaping.com.au</a></li>
+        <li><a href="#quote">Get a Free Quote</a></li>
+      </ul>
+    </div>
+    <svg width="80" height="90" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" style="opacity:.06">
+      <path d="M100,8 C128,8 156,22 172,47 C188,72 190,102 183,127 C176,152 163,170 148,182 C133,194 118,202 103,212 L100,215 L97,212 C82,202 67,194 52,182 C37,170 24,152 17,127 C10,102 12,72 28,47 C44,22 72,8 100,8 Z" fill="var(--huon)"/>
+    </svg>
+  </div>
+  <div class="fBot">
+    <p>© 2025 N&amp;H Landscaping, Hobart Tasmania. All rights reserved.</p>
+    <p>Built for Tasmania 🌿</p>
+  </div>
+</footer>
+
+<script>
+// CURSOR
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function tick(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;cur.style.cssText+=`;left:${mx}px;top:${my}px`;curR.style.cssText+=`;left:${rx}px;top:${ry}px`;requestAnimationFrame(tick)})();
+
+// PARTICLES
+const pw=document.getElementById('pts');
+for(let i=0;i<20;i++){const p=document.createElement('div');p.className='pt';p.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${9+Math.random()*14}s;animation-delay:${-Math.random()*20}s;width:${2+Math.random()*3}px;height:${2+Math.random()*3}px`;pw.appendChild(p);}
+
+// NAV
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',scrollY>60));
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1});
+document.querySelectorAll('.rev,.revL,.revR').forEach(el=>obs.observe(el));
+
+// COUNTER
+const cObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){const el=e.target,t=parseInt(el.dataset.target);
+    if(!isNaN(t)){let c=0;const s=Math.ceil(t/40);const ti=setInterval(()=>{c=Math.min(c+s,t);el.textContent=c;if(c>=t)clearInterval(ti)},28);}
+    cObs.unobserve(el);}
+}),{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(el=>cObs.observe(el));
+
+// EMAILJS
+(function(){emailjs.init({publicKey:"YOUR_EMAILJS_PUBLIC_KEY"})})();
+const SVC="YOUR_SERVICE_ID",TPL="YOUR_TEMPLATE_ID",RCKEY="YOUR_RECAPTCHA_SITE_KEY";
+
+// RATE LIMIT
+const RLK='nh_rl';
+function isRL(){try{const d=JSON.parse(localStorage.getItem(RLK)||'[]'),now=Date.now(),r=d.filter(t=>now-t<600000);localStorage.setItem(RLK,JSON.stringify(r));return r.length>=3;}catch{return false;}}
+function recRL(){try{const d=JSON.parse(localStorage.getItem(RLK)||'[]');d.push(Date.now());localStorage.setItem(RLK,JSON.stringify(d));}catch{}}
+
+// FORM
+const form=document.getElementById('qForm'),msg=document.getElementById('fMsg'),btn=document.getElementById('subBtn');
+const san=s=>s.replace(/[<>"'`]/g,'').trim().substring(0,500);
+const vEm=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const vPh=v=>/^[\d\s\+\-\(\)]{8,15}$/.test(v.trim());
+function sErr(id,m){const e=document.getElementById('e'+id);if(e)e.textContent=m;const i=document.getElementById(id);if(i)i.style.borderColor='var(--err)';}
+function clrErr(){document.querySelectorAll('.fErr').forEach(e=>e.textContent='');document.querySelectorAll('.fGrp input,.fGrp select,.fGrp textarea').forEach(e=>e.style.borderColor='');}
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();clrErr();msg.className='fMsg';
+  if(document.getElementById('website').value){msg.textContent='✅ Thanks! We\'ll be in touch soon.';msg.className='fMsg ok';form.reset();return;}
+  if(isRL()){msg.textContent='Too many requests. Please wait a few minutes.';msg.className='fMsg fail';return;}
+  const fn=san(document.getElementById('fn').value),ln=san(document.getElementById('ln').value),
+        em=san(document.getElementById('em').value),ph=san(document.getElementById('ph').value),
+        sv=document.getElementById('sv').value,sb=san(document.getElementById('sb').value),
+        ms=san(document.getElementById('msg').value);
+  let ok=true;
+  if(!fn){sErr('fn','Enter your first name.');ok=false;}
+  if(!ln){sErr('ln','Enter your last name.');ok=false;}
+  if(!vEm(em)){sErr('em','Enter a valid email.');ok=false;}
+  if(!vPh(ph)){sErr('ph','Enter a valid phone.');ok=false;}
+  if(!sv){sErr('sv','Select a service.');ok=false;}
+  if(!ok)return;
+  btn.disabled=true;btn.textContent='Sending…';
+  let tok='';
+  try{tok=await new Promise((r,j)=>grecaptcha.ready(()=>grecaptcha.execute(RCKEY,{action:'quote'}).then(r).catch(j)));}catch(e){console.warn(e);}
+  try{
+    await emailjs.send(SVC,TPL,{from_name:fn+' '+ln,from_email:em,phone:ph,suburb:sb||'Not provided',service:sv,message:ms||'No additional message.',recaptcha:tok?'verified':'skipped'});
+    recRL();
+    msg.textContent='✅ Thanks '+fn+'! Quote request sent — we\'ll contact you within 24 hours.';
+    msg.className='fMsg ok';form.reset();
+  }catch(e){
+    console.error(e);
+    msg.textContent='❌ Something went wrong. Please call us directly or try again.';
+    msg.className='fMsg fail';
+  }
+  btn.disabled=false;btn.textContent='Send Quote Request →';
+});
+</script>
+</body>
+</html>
